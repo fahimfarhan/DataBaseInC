@@ -1,11 +1,8 @@
 #ifndef UTILITIES
 #define UTILITIES
 
+#include "CommonHeaders.c"
 #include "InputBuffer.c"
-#include "common_headers.h"
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 void printPrompt() { printf("db > \n"); }
 
@@ -23,6 +20,14 @@ void readInput(InputBuffer *inputBuffer) {
   // Ignore trailing newline
   inputBuffer->inputLength = bytesRead - 1;
   inputBuffer->buffer[bytesRead - 1] = 0;
+}
+
+void processInput(InputBuffer *inputBuffer) {
+  if (inputBuffer->buffer[0] == '.') {
+    // todo: process meta commands
+  } else {
+    // execute sql statement
+  }
 }
 
 #endif /* !UTILITIESUTILITIES */

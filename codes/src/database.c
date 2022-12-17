@@ -1,5 +1,5 @@
+#include "CommonHeaders.c"
 #include "InputBuffer.c"
-#include "common_headers.h"
 #include "utils.c"
 
 int main(int argc, char *argv[]) {

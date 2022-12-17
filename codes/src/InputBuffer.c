@@ -1,7 +1,7 @@
 #ifndef INPUT_BUFFER
 #define INPUT_BUFFER
 
-#include "common_headers.h"
+#include "CommonHeaders.c"
 
 typedef struct {
   char *buffer;
@@ -22,7 +22,6 @@ InputBuffer *newInputBuffer() {
 void closeInputBuffer(InputBuffer *inputBuffer) {
   if (inputBuffer != NULL) {
     if (inputBuffer->buffer != NULL) {
-      free(inputBuffer->buffer);
     }
     free(inputBuffer);
   }
